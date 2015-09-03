@@ -23,8 +23,8 @@ public void setup()
 {
   size(533,300);
   strokeWeight(2);
-  background(0);
-  //frameRate(10);
+  background(0,0,0);
+  frameRate(60);
   a = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
   b = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
   c = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
@@ -35,7 +35,7 @@ public void setup()
 public void draw()
 {
 	noStroke();
-  	fill(0,0,0,20);
+  	fill(0,0,15,100);
   	rect(-100,-100,1000,1000,90);
 	int lightning = (int)(Math.random()*200)+50;
 	stroke(lightning, lightning, (int)(Math.random()*200)+50);
@@ -46,7 +46,7 @@ public void draw()
 		startX = endX;
 		startY = endY;
 	}
-	stroke(200,200,200);
+	noStroke();
 	a.move();
 	a.show();
 	b.move();
@@ -59,7 +59,7 @@ public void draw()
 	e.show();
 	f.move();
 	f.show();
-	resetMatrix();
+	//resetMatrix();
 }
 class Cloud
 {
@@ -74,15 +74,15 @@ class Cloud
 	public void move()
 	{
 		cX = cX+1;
-		int ran = (int)(Math.random()*100)+833;
+		int ran = (int)(Math.random()*100)+633;
 		if(cX > ran)
 		{
-			cX = -400;
+			cX = -200;
 		}
 	}
 	public void show()
 	{
-		int col = 200;
+		int col = 100;
 		for (int i = 3; i < 4; i++)
 		{
 			fill(col, col, col);
