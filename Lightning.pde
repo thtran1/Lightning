@@ -8,7 +8,7 @@ void setup()
   size(533,300);
   strokeWeight(2);
   background(0);
-  //frameRate(10);
+  frameRate(60);
   a = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
   b = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
   c = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
