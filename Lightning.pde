@@ -9,18 +9,18 @@ void setup()
   strokeWeight(2);
   background(0);
   //frameRate(10);
-  a = new Cloud((int)(Math.random()*534),10,(int)(Math.random()*50)+350, (int)(Math.random()*25)+50);
-  b = new Cloud((int)(Math.random()*534),10,(int)(Math.random()*50)+350, (int)(Math.random()*25)+50);
-  c = new Cloud((int)(Math.random()*534),10,(int)(Math.random()*50)+350, (int)(Math.random()*25)+50);
-  d = new Cloud((int)(Math.random()*534),10,(int)(Math.random()*50)+350, (int)(Math.random()*25)+50);
-  e = new Cloud((int)(Math.random()*534),10,(int)(Math.random()*50)+350, (int)(Math.random()*25)+50);
-  f = new Cloud((int)(Math.random()*534),10,(int)(Math.random()*50)+350, (int)(Math.random()*25)+50);
+  a = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
+  b = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
+  c = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
+  d = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
+  e = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
+  f = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
 }
 void draw()
 {
 	noStroke();
-  	fill(0,0,0,50);
-  	rect(-100,-100,1000,1000,80);
+  	fill(0,0,0,20);
+  	rect(-100,-100,1000,1000,90);
 	int lightning = (int)(Math.random()*200)+50;
 	stroke(lightning, lightning, (int)(Math.random()*200)+50);
 	while (endY < 300) {
@@ -33,7 +33,6 @@ void draw()
 	stroke(200,200,200);
 	a.move();
 	a.show();
-	System.out.println(a.cX);
 	b.move();
 	b.show();
 	c.move();
@@ -67,9 +66,9 @@ class Cloud
 	}
 	void show()
 	{
+		int col = 200;
 		for (int i = 3; i < 4; i++)
 		{
-			int col = (int)(Math.random()*10)+200;
 			fill(col, col, col);
 			ellipse(cX, cY, sX, sY);
 		}
