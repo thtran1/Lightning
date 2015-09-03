@@ -25,12 +25,12 @@ public void setup()
   strokeWeight(2);
   background(0,0,0);
   frameRate(60);
-  a = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
-  b = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
-  c = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
-  d = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
-  e = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
-  f = new Cloud((int)(Math.random()*834),10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
+  a = new Cloud(-200,10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
+  b = new Cloud(-50,10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
+  c = new Cloud(100,10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
+  d = new Cloud(250,10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
+  e = new Cloud(450,10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
+  f = new Cloud(600,10,(int)(Math.random()*50)+650, (int)(Math.random()*50)+50);
 }
 public void draw()
 {
@@ -59,7 +59,6 @@ public void draw()
 	e.show();
 	f.move();
 	f.show();
-	//resetMatrix();
 }
 class Cloud
 {
@@ -74,7 +73,7 @@ class Cloud
 	public void move()
 	{
 		cX = cX+1;
-		int ran = (int)(Math.random()*100)+633;
+		int ran = (int)(Math.random()*100)+600;
 		if(cX > ran)
 		{
 			cX = -200;
